@@ -51,3 +51,13 @@ After the run is complete, a file named **`benchmark_results.csv`** will be crea
             └── metrics
                 └── PerformanceTracker.java # The class that counts metrics
 ```
+
+## Visualization of results
+<img width="1149" height="754" alt="Screenshot_20251005_230657" src="https://github.com/user-attachments/assets/35f4d120-95c1-4779-b0b7-97f130dc1535" />
+
+<img width="1290" height="754" alt="Screenshot_20251005_230747" src="https://github.com/user-attachments/assets/f3aace22-47b3-45f8-b98e-c20a5e45033f" />
+
+<img width="1290" height="959" alt="Screenshot_20251005_230819" src="https://github.com/user-attachments/assets/e42fff55-3a0f-4500-8c8f-e46c7e2f038f" />
+
+
+
