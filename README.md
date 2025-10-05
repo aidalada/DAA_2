@@ -1,20 +1,15 @@
-# Shell Sort Performance Analysis
+# Heap Sort Performance Analysis
 
-This project is a Java implementation of the **Shell Sort algorithm**. It was created to analyze and compare the performance of different gap sequences on various types of data.
+This project is a Java implementation of the **Heap Sort** algorithm. It was built to sort arrays efficiently and to analyze its performance by tracking key metrics like swaps and comparisons.
 
-This was built for a university assignment in a Data Structures and Algorithms course.
+This was created for a university assignment in a Data Structures and Algorithms course.
 
 ## Features
 
-  * **Three Gap Sequences**: Includes three popular gap sequences for comparison:
-      * `SHELL`: The original sequence (`n/2, n/4, ...`)
-      * `KNUTH`: Knuth's sequence (`(3^k - 1) / 2`)
-      * `SEDGEWICK`: One of Sedgewick's sequences
-  * **Performance Metrics**: A `PerformanceTracker` class counts the exact number of **comparisons** and **swaps** for each sort.
-  * **Full Benchmark Suite**: A `BenchmarkRunner` tests the algorithm against:
-      * Different array sizes (`100`, `1,000`, `10,000`, `100,000`).
-      * Four data types: **random**, **sorted**, **reverse-sorted**, and **nearly-sorted**.
-  * **CSV Export**: All benchmark results are automatically saved to a `benchmark_results.csv` file, ready for plotting and analysis.
+  * **In-place Sorting**: Sorts the array without using significant extra memory. This means it has an **O(1) space complexity**.
+  * **Efficient Heap Building**: Uses a bottom-up `heapify` method to build the initial max-heap in linear time.
+  * **Detailed Metrics**: A `PerformanceTracker` class counts the number of **comparisons**, **swaps**, and **array accesses** during the sort.
+  * **Unit Tested**: Includes a suite of JUnit tests to ensure correctness for edge cases, including empty arrays, sorted/reversed data, and arrays with duplicates.
 
 ## Requirements
 
@@ -29,7 +24,7 @@ This was built for a university assignment in a Data Structures and Algorithms c
     ```bash
     mvn package
     ```
-4.  Run the main benchmark command. This will execute all tests.
+4.  Run the main benchmark command to execute all tests.
     ```bash
     mvn exec:java -Dexec.mainClass="cli.BenchmarkRunner"
     ```
@@ -45,11 +40,11 @@ After the run is complete, a file named **`benchmark_results.csv`** will be crea
     └── main
         └── java
             ├── algorithms
-            │   └── ShellSort.java      # The main algorithm logic
+            │   └── HeapSort.java       # The main algorithm logic
             ├── cli
-            │   └── BenchmarkRunner.java  # The app that runs the tests
+            │   └── BenchmarkRunner.java  # Runs the performance tests
             └── metrics
-                └── PerformanceTracker.java # The class that counts metrics
+                └── PerformanceTracker.java # Counts the metrics
 ```
 
 ## Visualization of results
